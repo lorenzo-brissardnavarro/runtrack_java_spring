@@ -1,0 +1,8 @@
+Pour tester le profil dev (qui est par défaut) = ./mvnw spring-boot:run
+Pour tester le profil prod = ./mvnw "-Dspring-boot.run.profiles=prod" spring-boot:run
+
+Les profils Spring permettent d'adapter la configuration d'une application selon son environnement :
+- dev : développement sur son ordinateur.
+- test : tests de l'application.
+- prod : utilisation réelle par les utilisateurs.
+Ils permettent notamment d'utiliser des bases de données, des URL et des paramètres différents selon l'environnement, sans modifier le code de l'application.
