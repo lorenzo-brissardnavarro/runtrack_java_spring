@@ -1,0 +1,5 @@
+Dans l'architecture MVC, les fichiers servent à :
+
+- Le modèle représente la structure des données, les règles métier et l'accès à la base de données 
+- La vue est responsable de la présentation des données à l’utilisateur final, c’est la partie visible de l’application
+- Le contrôleur joue un rôle d’intermédiaire entre le modèle et la vue en gérant les requêtes entrantes, en récupérant les données nécessaires auprès du modèle, et en déterminant la vue appropriée pour le rendu final
