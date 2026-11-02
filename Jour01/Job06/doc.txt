@@ -1,0 +1,2 @@
+DevTools permet de recharger automatiquement l'application lorsqu'on modifie le code. 
+Cela fait gagner du temps en évitant de redémarrer manuellement l'application à chaque modification.
