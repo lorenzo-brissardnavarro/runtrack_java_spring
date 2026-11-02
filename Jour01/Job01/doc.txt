@@ -1,0 +1,7 @@
+Spring Initializr est un outil qui facilite la création d'une application Spring Boot en générant un squelette de projet prêt à l'emploi. 
+
+Comment facilite-t-il la création des projets :
+- Il évite d'avoir à créer manuellement l'arborescence des dossiers et les fichiers de configuration.
+- Il offre le choix du langage de programmation (Java, Kotlin, Groovy) ainsi que la version de Spring Boot et de Java souhaitées.
+- Il permet de sélectionner facilement le gestionnaire de paquets (Gradle-Groovy, Gradle-Kotlin, Maven).
+- Il suffit de télécharger l'archive ZIP puis de la décompresser pour pouvoir utiliser le projet.
