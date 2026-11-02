@@ -1,0 +1,8 @@
+Le fichier pom.xml est le fichier de configuration clé d'un projet Maven en décrivant la gestion et l'automatisation du processus de compilation.
+Ce fichier contient notamment :
+- <groupId> : identifie le groupe créateur
+- <artifactId> : Le nom unique du projet
+- <version> : la version actuelle du projet
+- <dependencies> contient la déclaration des librairies externes dont le projet a besoin (Spring Web, Thymeleaf, DevTools ici)
+- <build> contient comment compiler, tester et packager via des plugins
+- <properties> permet de définir des variables réutilisables dans tout le fichier (ici la version de Java dont 27)
