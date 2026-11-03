@@ -1,0 +1,4 @@
+Il y a 3 façons de passer des données d'un contrôleur à une vue dans Spring Boot :
+- Utiliser l'objet Model et model.attribute("clé", valeur)
+- Utiliser ModelMap avec modelMap.addAttribute("clé", valeur)
+- Utiliser ModelAndView
