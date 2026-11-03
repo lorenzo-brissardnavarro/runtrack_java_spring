@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Exemple Thymeleaf</title>
+</head>
+<body>
+    <form action="/form" method="post">
+        <div>
+            <label for="nom">Prénom :</label>
+            <input type="text" id="prenom" name="prenom" required />
+        </div>
+        <div>
+            <button type="submit">Envoyer</button>
+        </div>
+    </form>
+    <h2 th:if="${prenom != null}" th:text="'Bienvenue ' + ${prenom}"></h2>
+</body>
+</html>

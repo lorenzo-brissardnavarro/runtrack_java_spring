@@ -1,0 +1,5 @@
+Spring facilite la gestion des formulaires grâce aux annotations qui simplifient la communication entre les vues HTML et les contrôleurs Java. Notamment :
+- @GetMapping pour afficher la page.
+- @PostMapping afin de gérer l'envoi des données du formulaire.
+- @RequestParam pour de récupérer facilement les valeurs saisies par l'utilisateur.
+- Model afin de transmettre les données récupérées à la vue pour les afficher.
