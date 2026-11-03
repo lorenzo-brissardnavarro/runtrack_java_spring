@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Exemple Thymeleaf</title>
+</head>
+<body>
+    <form action="#" th:action="@{/form}" th:object="${userForm}" method="post">
+        <div>
+            <label for="prenom">Prénom :</label>
+            <input type="text" id="prenom" th:field="*{prenom}" />
+            <span th:if="${#fields.hasErrors('prenom')}" th:errors="*{prenom}"></span>
+        </div>
+        <div>
+            <label for="age">Age :</label>
+            <input type="number" id="age" th:field="*{age}" />
+            <span th:if="${#fields.hasErrors('age')}" th:errors="*{age}"></span>
+        </div>
+        <button type="submit">Envoyer</button>
+    </form>
+    <h2 th:if="${prenom != null}" th:text="'Bienvenue ' + ${prenom}"></h2>
+</body>
+</html>
