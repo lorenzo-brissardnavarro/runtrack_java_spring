@@ -1,5 +1,7 @@
-Spring facilite la gestion des formulaires grâce aux annotations qui simplifient la communication entre les vues HTML et les contrôleurs Java. Notamment :
-- @GetMapping pour afficher la page.
-- @PostMapping afin de gérer l'envoi des données du formulaire.
-- @RequestParam pour de récupérer facilement les valeurs saisies par l'utilisateur.
-- Model afin de transmettre les données récupérées à la vue pour les afficher.
+Spring permet de valider les données d’un formulaire grâce à des annotations de validation placées directement dans la classe modèle.
+
+Voici le fonctionnement :
+- Définition les règles de validation dans le modèle (utilisation des annotations comme @NotBlank, @NotNull, @Min, @Max, @Size pour définir les conditions que les données doivent respecter)
+- Déclenchement de la validation dans le contrôleur avec @Valid
+- Récupération des erreurs avec BindingResult pour enregistrer les erreurs détectées et hasErrors() permet de vérifier si des erreurs sont présentes
+- Affichage des erreurs dans la vue avec th:errors
