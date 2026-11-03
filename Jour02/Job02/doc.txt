@@ -1,0 +1,6 @@
+La différence est que Thymeleaf est un moteur de modèles dynamique côté serveur alors que les templates HTML classiques sont des fichiers statiques (le contenu ne change pas sans JavaScrip).
+
+Les avantages de Thymeleaf
+
+- Dès que le serveur Java l'exécute, Thymeleaf remplace le contenu statique par les vraies données.
+- Contrairement au HTML classique, Thymeleaf permet d'insérer des conditions (th:if) ou encore des boucles (th:each) directement dans le code HTML avant d'envoyer la page à l'utilisateur.

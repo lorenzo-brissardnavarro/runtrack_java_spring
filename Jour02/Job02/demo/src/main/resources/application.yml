@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: demo
+  profiles:
+    default: dev
+---
+spring:
+  config:
+    activate:
+      on-profile: dev
+greeting:
+ message: "Bonjour DEV"
+---
+spring:
+  config:
+    activate:
+      on-profile: prod
+greeting:
+ message: "Bonjour PROD"
