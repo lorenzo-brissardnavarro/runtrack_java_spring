@@ -1,0 +1,4 @@
+Les bases de données en mémoire (comme H2) sont indispensables en phase de développement parce que :
+- on sait tout de suite si le code fonctionne après une modification
+- la base en mémoire est créée au démarrage de l'application et détruite lorsqu'elle s'arrête (pas de pollution des données)
+- h2 s'intègre comme une simple dépendance dans le projet (via Maven) => simplicité
