@@ -1,0 +1,3 @@
+Spring Data facilite la création de requêtes grâce aux méthodes prédéfinies de JpaRepository et à l'écriture automatique des requêtes à partir du nom des méthodes.
+Il suffit de déclarer une méthode dans le repository et Spring Data JPA génère automatiquement la requête SQL correspondante, sans avoir besoin de l'écrire manuellement.
+
