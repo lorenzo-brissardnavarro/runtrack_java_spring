@@ -1,0 +1,5 @@
+JPA (Java Persistance Api) est une spécification Java / un ORM permettant de lier des objets à des données contenues dans une base de données.
+Les avantages de JPA pour faciliter l'accès aux bases de données sont :
+- Il permet de ne plus écrire du SQL pour chaque table => une classe Java est reliée à une table de la base de données à l'aide d'annotations
+- Il supprime le besoin d'écrire manuellement les requêtes répétitives pour le CRUD => accessibles via des méthodes génériques
+- Le Java ne dépend plus d'un moteur de base de données spécifique (MySQL, PostgreSQL) => si changement de base de données, il suffit de modifier la configuration
