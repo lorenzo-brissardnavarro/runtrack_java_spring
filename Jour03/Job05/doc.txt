@@ -1,0 +1,4 @@
+Avec Spring Data JPA, on peut créer et lire des entités grâce aux méthodes fournies par JpaRepository.
+- on utilise la méthode save() pour créer un nouvel objet dans la base de données.
+- on utilise des méthodes comme findAll() pour récupérer toutes les entités ou findById() pour en récupérer une à partir de son id.
+Les méthodes peuvent être appelées depuis le contrôleur et les données récupérées sont transmises à la vue pour être affichées.
