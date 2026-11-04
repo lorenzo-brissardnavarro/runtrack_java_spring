@@ -1,0 +1,4 @@
+Dans le contexte JPA, les annotations servent à :
+- @Entity => pour indiquer que la classe Java associée correspond à une table dans la base de données relationnelle
+- @Id => pour désigner l'attribut qui fait office de clé primaire.
+- @GeneratedValue(strategy = GenerationType.IDENTITY) => sert à configurer le mode d'incrémentation de la colonne
