@@ -30,9 +30,9 @@ public class PersonController {
         return "all";
     }
 
-    // Méthode pour ajouter un nouvel objet Person
-    @PostMapping("/add")
-    public String addPerson(@ModelAttribute Person person) {
+    // Méthode pour ajouter un nouvel objet Person ou mettre à jour un objet existant
+    @PostMapping("/save")
+    public String SavePerson(@ModelAttribute Person person) {
         personRepository.save(person);
         return "redirect:/all";
     }
@@ -44,7 +44,4 @@ public class PersonController {
         return "redirect:/all";
     }
 
-    
-    
-    
 }

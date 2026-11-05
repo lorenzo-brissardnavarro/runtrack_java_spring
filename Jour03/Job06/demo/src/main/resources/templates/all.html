@@ -21,6 +21,16 @@
                 <td th:text="${person.name}">Exemple</td>
                 <td th:text="${person.age} + ' ans'">0</td>
                 <td>
+                    <form th:action="@{/save}" method="post">
+                        <input type="hidden" name="id" th:value="${person.id}" />
+                        <label for="name">Nom :</label>
+                        <input type="text" id="name" name="name" th:value="${person.name}" required>
+                        <br>
+                        <label for="age">Âge :</label>
+                        <input type="number" id="age" name="age" th:value="${person.age}" required>
+                        <br>
+                        <button type="submit">Mettre à jour</button>
+                    </form>
                     <form th:action="@{/delete}" method="post">
                         <input type="hidden" name="id" th:value="${person.id}" />
                         <button type="submit">Supprimer</button>
@@ -31,7 +41,7 @@
     </table>
 
     <h2>Ajouter une personne</h2>
-    <form th:action="@{/add}" th:object="${person}" method="post">
+    <form th:action="@{/save}" th:object="${person}" method="post">
         <label for="name">Nom :</label>
         <input type="text" id="name" th:field="*{name}" required>
         <br>
