@@ -1,0 +1,4 @@
+Spring Security est intéressant pour protéger une application puisqu'il permet de :
+- gérer l'authentification et les autorisations
+- protéger les pages selon les rôles des utilisateurs
+- sécuriser les accès à l'application.

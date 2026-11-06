@@ -1,0 +1,3 @@
+Afin de personnaliser le formulaire de connexion avec Spring Security, il faut :
+- créer une page HTML personnalisée
+- configurer SecurityFilterChain avec .loginPage("/login") pour indiquer à Spring Security d'utiliser cette page.

@@ -1,3 +1,5 @@
-La méthode save() de Spring Data JPA utilise la valeur de la propriété id pour déterminer s'il s'agit d'une création ou d'une mise à jour.
-- pour la création : si @Id est null => Spring Data JPA considère que l'entité est nouvelle
-- pour une mise à jour : si @Id n'est pas null et qu'elle correspond à un enregistrement existant en bdd => Spring considère que l'entité n'est pas nouvelle
+Il conseillé de séparer la logique métier des contrôleurs car cela permet de :
+- mieux organiser le code
+- faciliter la maintenance
+- effectuer des tests. 
+Les contrôleurs gèrent les requêtes tandis que les services contiennent la logique métier.
