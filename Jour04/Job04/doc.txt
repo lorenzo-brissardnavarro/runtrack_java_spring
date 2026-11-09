@@ -1,0 +1,4 @@
+Pour gérer les autorisations basées sur les rôles, Spring Security permet :
+- De définir un ou plusieurs rôles à chaque utilisateur via UserDetailsService
+- D'utiliser authorizeHttpRequests() avec la méthode hasRole() pour associer des chemins à des rôles spécifiques
+- De gérer l'accès aux différentes pages en récupérant, pendant le processus d’authentification, les rôles qui sont attribués à la personne connectée.

@@ -22,10 +22,27 @@ public class PersonController {
         this.personService = personService;
     }
 
+    @GetMapping("/")
+    public String home() {
+        return "redirect:/login"; // redirige vers la page de connexion
+    }
+
     // Méthode pour afficher la page de connexion
     @GetMapping("/login")
     public String login() {
         return "login";
+    }
+
+    // Méthode pour afficher la page user
+    @GetMapping("/user")
+    public String user() {
+        return "user";
+    }
+
+    // Méthode pour afficher la page admin
+    @GetMapping("/admin")
+    public String admin() {
+        return "admin";
     }
 
     // Méthode pour afficher tous les objets Person
