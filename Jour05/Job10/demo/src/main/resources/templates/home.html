@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <title>Page Infos</title>
+</head>
+<body>
+
+    <!-- remplace la div par le header -->
+    <div th:replace="~{fragments/header :: monHeader}"></div>
+
+    <!-- Affichage du nom de l'utilisateur connecté -->
+    <div sec:authorize="isAuthenticated()">
+        <h1>Bonjour <span sec:authentication="name">Username</span></h1>
+    </div>
+
+    <!-- Affichage du rôle de l'utilisateur connecté -->
+    <div sec:authorize="hasRole('ROLE_ADMIN')">
+        <p>Rôle : Administrateur</p>
+    </div>
+    <div sec:authorize="hasRole('ROLE_USER')">
+        <p>Rôle : Utilisateur</p>
+    </div>
+
+    <!-- insère le footer à l'intérieur de la div -->
+    <div th:insert="~{fragments/footer :: monFooter}"></div>
+
+</body>
+</html>

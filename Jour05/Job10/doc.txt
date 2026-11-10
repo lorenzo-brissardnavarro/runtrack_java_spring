@@ -1,0 +1,7 @@
+Pour inclure un fragment Thymeleaf dans une vue :
+- on définit un fragment dans un fichier avec th:fragment="monFragment"
+- on l'intègre dans une autre page avec th:replace="~{fragments/fichier :: monFragment}"
+
+Il y a 2 attributs différents :
+- th:insert : insère le fragment à l'intérieur de l'élément HTML existant.
+- th:replace : remplace l'élément HTML existant par le fragment.
