@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Indique l'utilisation d'un vocabulaire XML dans une application Spring Web Flow -->
+<flow xmlns="http://www.springframework.org/schema/webflow"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="
+        http://www.springframework.org/schema/webflow
+        https://www.springframework.org/schema/webflow/spring-webflow.xsd">
+
+    <!-- On crée une variable "purchase" qui est une instance du modèle "Purchase" pour stocker les informations de l'achat tout au long du flux. -->
+    <var name="purchase" class="com.example.demo.model.Purchase"/>
+
+    <!-- view-state = une étape pour afficher une page -->
+    <!-- view = chemin de la vue à afficher. -->
+    <view-state id="product" view="purchase/product" model="purchase">
+        <!-- si l'événement est reçu, passer à l'étape suivante -->
+        <transition on="next" to="customer"/> 
+    </view-state>
+
+    <!-- Etape 2 : informations client -->
+    <view-state id="customer" view="purchase/customer" model="purchase">
+        <transition on="next" to="confirmation"/>
+        <transition on="back" to="product"/>
+    </view-state>
+
+    <!-- Etape 3 : confirmation -->
+    <view-state id="confirmation" view="purchase/confirmation">
+        <transition on="confirm" to="success"/>
+        <transition on="back" to="customer"/>
+    </view-state>
+
+    <end-state id="success" view="purchase/success"/>
+
+</flow>

@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Informations client</title>
+</head>
+<body>
+
+    <h1>Étape 2 : Vos informations</h1>
+
+    <form method="post" th:action="${flowExecutionUrl}" th:object="${purchase}">
+        <label>Nom :</label>
+        <input type="text" th:field="*{customerName}" required>
+
+        <label>Email :</label>
+        <input type="email" th:field="*{email}" required>
+
+        <button type="submit" name="_eventId" value="back">Retour</button>
+
+        <button type="submit" name="_eventId" value="next">Continuer</button>
+
+    </form>
+
+</body>
+</html>

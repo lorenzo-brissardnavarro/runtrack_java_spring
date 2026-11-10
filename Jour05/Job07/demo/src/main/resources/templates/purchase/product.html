@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Choisir un produit</title>
+</head>
+<body>
+
+    <h1>Étape 1 : Choisir un produit</h1>
+
+    <!-- Méthode POST pour envoyer les données du formulaire -->
+     <!-- th:action = URL de l'action du formulaire, flowExecutionUrl = URL de l'exécution du flux -->
+    <!-- th:object = objet lié au formulaire, purchase = objet d'achat -->
+    <form method="post" th:action="${flowExecutionUrl}" th:object="${purchase}">
+
+        <label>Produit :</label>
+
+        <!-- th:field = champ lié à l'objet d'achat, *{product} = champ "product" de l'objet "purchase" -->
+        <select th:field="*{product}" required>
+            <option value="Ordinateur">Ordinateur</option>
+            <option value="Téléphone">Téléphone</option>
+            <option value="Tablette">Tablette</option>
+        </select>
+
+        <button type="submit" name="_eventId" value="next">Continuer</button>
+
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Confirmation</title>
+</head>
+<body>
+
+    <h1>Étape 3 : Récapitulatif de votre achat</h1>
+
+    <p>Produit : <strong th:text="${purchase.product}"></strong></p>
+    <p>Nom : <strong th:text="${purchase.customerName}"></strong></p>
+    <p>Email : <strong th:text="${purchase.email}"></strong></p>
+    <form method="post" th:action="${flowExecutionUrl}">
+        <button type="submit" name="_eventId" value="back">Modifier</button>
+        <button type="submit" name="_eventId" value="confirm">Confirmer mon achat</button>
+    </form>
+
+</body>
+</html>

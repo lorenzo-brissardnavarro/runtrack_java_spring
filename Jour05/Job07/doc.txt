@@ -1,0 +1,4 @@
+Dans Spring Web Flow, les états et les transitions sont définis dans un fichier XML :
+- Les états (view-state) représentent les différentes étapes du parcours utilisateur
+- Les transitions (transition) définissent les passages d'un état à un autre, déclenchés par un événement (clic sur un bouton)
+- L'état final (end-state) indique la fin du parcours

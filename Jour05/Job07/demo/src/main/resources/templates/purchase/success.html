@@ -1,0 +1,17 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Achat terminé</title>
+</head>
+<body>
+
+    <h1>Votre achat est confirmé !</h1>
+
+    <p>Merci <strong th:text="${purchase.customerName}"></strong> pour votre commande.</p>
+    <p>Produit commandé : <strong th:text="${purchase.product}"></strong></p>
+    <p>Un récapitulatif sera envoyé à votre adresse e-mail.</p>
+
+</body>
+</html>
