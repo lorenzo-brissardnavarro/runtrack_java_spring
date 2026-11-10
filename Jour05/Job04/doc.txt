@@ -5,3 +5,5 @@ Voici le fonctionnement :
 - Déclenchement de la validation dans le contrôleur avec @Valid
 - Récupération des erreurs avec BindingResult pour enregistrer les erreurs détectées et hasErrors() permet de vérifier si des erreurs sont présentes
 - Affichage des erreurs dans la vue avec th:errors
+
+Le message d'erreur affiché provient de l’attribut message de l’annotation, sinon de messages.properties, sinon du message par défaut.
