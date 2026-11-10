@@ -1,0 +1,4 @@
+Pour accéder à l'utilisateur actuellement connecté dans une vue Thymeleaf, il faut :
+- Ajouter la dépendance thymeleaf-extras-springsecurity6 dans le fichier pom.xml
+- Afficher le nom d'utilisateur sur la vue, avec le préfixe sec: (sec:authentication="name")
+- sec:authorize="hasRole('ADMIN')" pour filtrer l'affichage selon le rôle de l'utilisateur
