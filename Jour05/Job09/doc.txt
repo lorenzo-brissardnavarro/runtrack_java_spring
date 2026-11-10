@@ -1,0 +1,6 @@
+Pour configurer une page d'erreur personnalisée avec Thymeleaf et Spring Boot, il faut :
+- Créer un dossier error dans src/main/resources/templates/
+- Ajouter des pages HTML correspondant aux codes d'erreur (404.html, 500.html)
+- Personnaliser leur contenu
+- Laisser Spring Boot détecter automatiquement le code HTTP et afficher la page correspondante
+- Si Spring Security est utilisé, autoriser l'accès à /error avec permitAll()
