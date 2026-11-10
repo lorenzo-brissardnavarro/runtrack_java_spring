@@ -1,0 +1,7 @@
+Spring Web Flow est une extension de Spring MVC qui permet d'implémenter les « flux » d'une application web.
+Un flux encapsule une séquence d'étapes guidant un utilisateur dans l'exécution d'une tâche.
+
+Spring Web Flow est particulièrement adapté aux applications web avec état et navigation contrôlée :
+- Il y a un début et une fin clairement définis.
+- L'utilisateur doit parcourir une série d'écrans dans un ordre précis.
+- Les modifications ne sont finalisées qu'à la dernière étape.
