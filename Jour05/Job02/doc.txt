@@ -1,0 +1,3 @@
+Pour lier et afficher une liste d'objets dans une vue Thymeleaf, il faut :
+- Ajouter la liste au modèle dans le contrôleur 
+- Utiliser l'attribut th:each dans le template HTML pour itérer sur cette liste
