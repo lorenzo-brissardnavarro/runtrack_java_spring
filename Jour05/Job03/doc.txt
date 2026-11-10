@@ -1,0 +1,2 @@
+Pour lier un objet à un formulaire Thymeleaf, on utilise principalement l'attribut th:object sur la balise <form> et th:field sur les champs de saisie.
+À la validation, Spring remplit automatiquement l'objet avec les données saisies grâce à l'annotation @ModelAttribute.
