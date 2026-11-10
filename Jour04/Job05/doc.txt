@@ -1,0 +1,3 @@
+Pour stocker en toute sécurité les mots de passe des utilisateurs, Spring Security utilise PasswordEncoder qui applique une fonction de hachage (BCrypt).
+Grâce à passwordEncoder.encode(password), le mot de passe en clair ne sera jamais visible. 
+En base de données, il sera stocké sous une forme sécurisée (impossible de retrouver le mot de passe d'origine à partir du hash).
