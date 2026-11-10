@@ -1,0 +1,2 @@
+Le principal avantage de Thymeleaf par rapport à JSP est que les fichiers Thymeleaf sont du vrai HTML valide enrichi d'attributs spécifiques (attributs th:).
+Ainsi, un fichier Thymeleaf peut être ouvert directement dans un navigateur web. À l'inverse, un fichier JSP nécessite une compilation et un serveur.
