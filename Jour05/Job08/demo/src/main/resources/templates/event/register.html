@@ -1,0 +1,28 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Processus d'inscription à un événement</title>
+</head>
+<body>
+
+    <h1>Étape 1 : Renseigner les informations personnelles</h1>
+
+    <!-- Méthode POST pour envoyer les données du formulaire -->
+     <!-- th:action = URL de l'action du formulaire, flowExecutionUrl = URL de l'exécution du flux -->
+    <!-- th:object = objet lié au formulaire, purchase = objet d'achat -->
+    <form method="post" th:action="${flowExecutionUrl}" th:object="${modelEvent}">
+
+        <label>Nom :</label>
+        <input type="text" th:field="*{firstName}" required>
+
+        <label>Email :</label>
+        <input type="email" th:field="*{email}" required>
+
+        <button type="submit" name="_eventId" value="next">Choisir l'événement</button>
+
+    </form>
+
+</body>
+</html>

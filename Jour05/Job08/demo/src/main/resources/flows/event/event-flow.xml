@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Indique l'utilisation d'un vocabulaire XML dans une application Spring Web Flow -->
+<flow xmlns="http://www.springframework.org/schema/webflow"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="
+        http://www.springframework.org/schema/webflow
+        https://www.springframework.org/schema/webflow/spring-webflow.xsd">
+
+    <!-- On crée une variable "modelEvent" qui est une instance du modèle "Event" pour stocker les informations de l'événement tout au long du flux. -->
+    <var name="modelEvent" class="com.example.demo.model.Event"/>
+
+    <!-- view-state = une étape pour afficher une page -->
+    <!-- view = chemin de la vue à afficher. -->
+    <view-state id="register" view="event/register" model="modelEvent">
+        <!-- si l'événement est reçu, passer à l'étape suivante -->
+        <transition on="next" to="choiceEvent"/> 
+    </view-state>
+
+    <!-- Etape 2 : choix de l'événement -->
+    <view-state id="choiceEvent" view="event/choiceEvent" model="modelEvent">
+        <transition on="next" to="date"/>
+        <transition on="back" to="register"/>
+    </view-state>
+
+    <!-- Etape 3 : choix de la date -->
+    <view-state id="date" view="event/date" model="modelEvent">
+        <transition on="next" to="confirmation"/>
+        <transition on="back" to="choiceEvent"/>
+    </view-state>
+
+    <!-- Etape 4 : confirmation -->
+    <view-state id="confirmation" view="event/confirmation" model="modelEvent">
+        <transition on="confirm" to="success"/>
+        <transition on="back" to="date"/> 
+    </view-state>
+
+    <end-state id="success" view="event/success"/>
+
+</flow>

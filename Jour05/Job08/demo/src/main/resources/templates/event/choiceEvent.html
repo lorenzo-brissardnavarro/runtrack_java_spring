@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Processus d'inscription à un événement</title>
+</head>
+<body>
+
+    <h1>Étape 2 : Choix de l'événement</h1>
+
+    <form method="post" th:action="${flowExecutionUrl}" th:object="${modelEvent}">
+        <select th:field="*{name}" required>
+            <option value="Kickoff">Kickoff</option>
+            <option value="How To">How To</option>
+            <option value="Suivi de projet">Suivi de projet</option>
+        </select>
+
+        <button type="submit" name="_eventId" value="back">Retour</button>
+
+        <button type="submit" name="_eventId" value="next">Choisir la date</button>
+
+    </form>
+
+</body>
+</html>

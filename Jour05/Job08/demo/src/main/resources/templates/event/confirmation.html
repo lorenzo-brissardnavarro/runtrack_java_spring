@@ -1,0 +1,22 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Processus d'inscription à un événement</title>
+</head>
+<body>
+
+    <h1>Étape 4 : Récapitulatif de votre achat</h1>
+
+    <p>Nom : <strong th:text="${modelEvent.firstName}"></strong></p>
+    <p>Email : <strong th:text="${modelEvent.email}"></strong></p>
+    <p>Événement choisi : <strong th:text="${modelEvent.name}"></strong></p>
+    <p>Date choisie : <strong th:text="${modelEvent.date}"></strong></p>
+    <form method="post" th:action="${flowExecutionUrl}">
+        <button type="submit" name="_eventId" value="back">Modifier</button>
+        <button type="submit" name="_eventId" value="confirm">Confirmer mon créneau</button>
+    </form>
+
+</body>
+</html>

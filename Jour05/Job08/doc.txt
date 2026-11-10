@@ -1,0 +1,7 @@
+On peut lier une vue Thymeleaf à une étape Spring Web Flow grâce à l'attribut view de la balise <view-state> dans le fichier XML.
+
+Exemple : <view-state id="affichage" view="dossier/page"/>
+
+- id="affichage" identifie l'étape du flux.
+- view="dossier/page" indique la vue Thymeleaf à afficher.
+Spring Web Flow recherche alors le fichier page.html dans le dossier templates/dossier/.

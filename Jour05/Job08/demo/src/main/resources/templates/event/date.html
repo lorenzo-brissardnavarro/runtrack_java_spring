@@ -1,0 +1,23 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Processus d'inscription à un événement</title>
+</head>
+<body>
+
+    <h1>Étape 3 : Choix de la date</h1>
+
+    <form method="post" th:action="${flowExecutionUrl}" th:object="${modelEvent}">
+        <label>Date :</label>
+        <input type="date" th:field="*{date}" required>
+
+        <button type="submit" name="_eventId" value="back">Retour</button>
+
+        <button type="submit" name="_eventId" value="next">Récapitulatif</button>
+
+    </form>
+
+</body>
+</html>

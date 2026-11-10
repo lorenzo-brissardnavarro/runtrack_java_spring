@@ -1,0 +1,17 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Processus d'inscription à un événement</title>
+</head>
+<body>
+
+    <h1>Votre réservation est confirmée !</h1>
+
+    <p>Merci <strong th:text="${modelEvent.firstName}"></strong> pour votre commande.</p>
+    <p>Vous avez réservé un place pour l'événement <strong th:text="${modelEvent.name}"></strong> qui aura lieu le <strong th:text="${modelEvent.date}"></strong> au 107 Boulevard de la République.</p>
+    <p>Un récapitulatif sera envoyé à votre adresse e-mail.</p>
+
+</body>
+</html>
