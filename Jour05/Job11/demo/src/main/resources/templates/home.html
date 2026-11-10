@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <title>Page Infos</title>
+    <link th:href="@{/css/style.css}" rel="stylesheet" />
+    <script th:src="@{/js/script.js}" defer></script>
+</head>
+<body>
+
+    <!-- remplace la div par le header -->
+    <div th:replace="~{fragments/header :: monHeader}"></div>
+
+    <main>
+        <div class="card">
+            <div>
+                <h2>Bienvenue sur notre site</h2>
+                <img th:src="@{/images/logo.jpg}" alt="Image de la plateforme" />
+            </div>
+            <div>
+                <p>Vous pouvez compter sur <span id="prenom">Aicha</span></p>
+                <button id="monBouton">Changer le mot</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- insère le footer à l'intérieur de la div -->
+    <div th:insert="~{fragments/footer :: monFooter}"></div>
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+spring:
+    application:
+        name: demo
+    datasource:
+        url: jdbc:h2:mem:testdb
+        username: sa
+        password:
+    jpa:
+        hibernate:
+            ddl-auto: update
+        show-sql: true
+    h2:
+        console:
+            enabled: true
+logging:
+    level:
+        root: INFO
+        "[org.springframework.security]": TRACE
+        "[org.springframework.security.authentication]": TRACE
+        "[org.springframework.security.web]": TRACE
+        "[org.springframework.web]": DEBUG

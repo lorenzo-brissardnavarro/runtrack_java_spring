@@ -1,0 +1,5 @@
+Dans un projet Spring Boot, les ressources statiques doivent être placées dans le dossier : src/main/resources/static
+Pour les utiliser dans une page Thymeleaf, on emploie la syntaxe :
+- CSS : <link th:href="@{/css/style.css}" rel="stylesheet">
+- JS : <script th:src="@{/js/script.js}" defer></script>
+- IMAGE : <img th:src="@{/images/logo.png}" alt="Logo">
