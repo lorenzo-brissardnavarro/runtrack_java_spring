@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Page Commentaires</title>
+    <link th:href="@{/css/style.css}" rel="stylesheet" />
+    <script th:src="@{/js/comments.js}" defer></script>
+</head>
+<body>
+
+    <!-- remplace la div par le header -->
+    <div th:replace="~{fragments/header :: monHeader}"></div>
+
+    <main>
+        <div class="card">
+            <div>
+                <h2>Bienvenue sur notre site</h2>
+                <img th:src="@{/images/logo.jpg}" alt="Image de la plateforme" />
+            </div>
+            <div>
+                <div id="commentsContainer" th:insert="~{fragments/liste :: commentaires-asynchrones}"></div>
+            </div>
+            <button id="refreshComments">Refresh</button>
+        </div>
+    </main>
+    
+
+    <!-- insère le footer à l'intérieur de la div -->
+    <div th:insert="~{fragments/footer :: monFooter}"></div>
+</body>
+</html>

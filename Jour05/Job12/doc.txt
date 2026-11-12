@@ -1,0 +1,3 @@
+Pour charger du contenu de manière asynchrone, il faut :
+- un fragment Thymeleaf (th:fragment) qui contiendra les données récupérées
+- un fichier JS qui effectue avec une requête HTTP côté client

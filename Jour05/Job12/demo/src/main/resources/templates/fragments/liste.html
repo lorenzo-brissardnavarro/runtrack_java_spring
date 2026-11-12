@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<body>
+    <div th:fragment="commentaires-asynchrones" id="zone-dynamique">
+        <ul>
+            <li th:each="item : ${comments}" th:text="${item.auteur} + ' : ' + ${item.texte}">Élément</li>
+        </ul>
+    </div>
+</body>
+</html>
